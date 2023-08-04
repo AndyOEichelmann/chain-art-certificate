@@ -17,7 +17,7 @@ button:hover {
 }
 
 /* home */
-.home h2, .artist-gallery h2 {
+.home h2, .artist-gallery h2, .coa h2 {
   margin-bottom: 20px;
 }
 
@@ -64,6 +64,7 @@ button:hover {
 
   display: flex;
   flex-wrap: wrap;
+
   align-content: space-between;
   gap: 20px;
 }
@@ -80,6 +81,10 @@ button:hover {
   background-color: lightcoral;
 
   text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .coa-preview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.25);
@@ -87,13 +92,19 @@ button:hover {
 .coa-preview h2 {
   font-size: 22px;
 
-  color: antiquewhite;
+  color: white;
+  text-shadow: 0px 0px 5px black;
 
   margin-bottom: 4px;
 }
 .coa-preview p {
   margin-left: 15px;
   color: #444;
+}
+.obj-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 /* staus msg */
@@ -168,4 +179,83 @@ form label span {
 .breadcrums .crumb a {
   color: #333;
   margin-left: 10px;
+}
+
+/* coa page */
+.coa-page{
+  margin: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.coa-img{
+  width: 300px;
+  height: 300px;
+
+  background-color: lightcoral;
+
+  border-radius: 15px;
+
+  grid-column: 1;
+  grid-row: 1;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  padding: 10px;
+
+  color: white;
+  text-shadow: 0px 0px 5px white;
+}
+.coa-issuers{
+  grid-column: 1;
+  grid-row: 3;
+
+  padding: 10px;
+}
+.coa-issuer-signature{
+  border-radius: 15px;
+
+  background-color: lightcoral;
+  
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 5px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.coa-issuer-info{
+  margin: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.coa-data{
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+.coa-data div{
+  margin-bottom: 10px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.coa-statement{
+  padding: 10px;
+
+  grid-column: 1 / 3;
+  grid-row: 2;
 }

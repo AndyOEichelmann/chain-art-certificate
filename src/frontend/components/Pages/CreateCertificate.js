@@ -73,8 +73,8 @@ const CreateCertificate = () => {
                         required
                         name="dimention-unit"
                     >
-                        <option value="centimeter">cm</option>
-                        <option value="meter">m</option>
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
                     </select>
                 </label>
 
