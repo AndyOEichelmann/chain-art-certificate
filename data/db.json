@@ -1,0 +1,208 @@
+{
+  "certificates": [
+    {
+      "metadata":{
+        "title": "Painting 1",
+        "type": "coa",
+        "properties":{
+          "title": "Painting 1",
+          "artist": "Jhon Dow",
+          "date": "02/17/1999",
+          "dimentions": {
+            "length": "60",
+            "height": "100",
+            "unit": "centimeter"
+          },
+          "medium": "Oil Painting",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, tenetur corrupti error officia asperiores culpa.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "Jhon Dow",
+          "type": "Artist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/artist"
+        }
+      },
+      "contract": "ERC721ACoA",
+      "token":{
+        "tokenId": 0,
+        "tokenURI": "ipfs://ERC721ACoA/metadataURI/0"
+      },
+      "id": 0
+    },
+    {
+      "metadata":{
+        "title": "Painting 2",
+        "type": "coa",
+        "properties":{
+          "title": "Painting 2",
+          "artist": "Jhon Dow",
+          "date": "06/05/1999",
+          "dimentions": {
+            "length": "80",
+            "height": "100",
+            "unit": "centimeter"
+          },
+          "medium": "Oil Painting",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, tenetur corrupti error officia asperiores culpa.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "Jhon Dow",
+          "type": "Artist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/artist"
+        }
+      },
+      "contract": "ERC721ACoA",
+      "token":{
+        "tokenId": 1,
+        "tokenURI": "ipfs://ERC721ACoA/metadataURI/1"
+      },
+      "id": 1
+    },
+    {
+      "metadata":{
+        "title": "Painting 1",
+        "type": "coa",
+        "properties":{
+          "title": "Painting 1",
+          "artist": "Jhane Dow",
+          "date": "08/20/1978",
+          "dimentions": {
+            "length": "50",
+            "height": "80",
+            "unit": "centimeter"
+          },
+          "medium": "Acuarel",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, tenetur corrupti error officia asperiores culpa.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "Jhane Dow",
+          "type": "Artist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/artist"
+        }
+      },
+      "contract": "ERC721ACoA",
+      "token":{
+        "tokenId": 2,
+        "tokenURI": "ipfs://ERC721ACoA/metadataURI/2"
+      },
+      "id": 2
+    },
+    {
+      "metadata":{
+        "title": "Sculpture 1",
+        "type": "coa",
+        "properties":{
+          "title": "Sculpture 1",
+          "artist": "Mr. Smith",
+          "date": "11/10/1957",
+          "dimentions": {
+            "length": "100",
+            "height": "200",
+            "unit": "centimeter"
+          },
+          "medium": "Metalic Sculpture",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, at! Officia quod quia magnam enim.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "Mr. Smith",
+          "type": "Artist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/artist"
+        }
+      },
+      "contract": "CostumACOA",
+      "token":{
+        "tokenId": 0,
+        "tokenURI": "ipfs://CostumACOA/metadataURI/0"
+      },
+      "id": 3
+    },
+    {
+      "metadata":{
+        "title": "Sculpture 2",
+        "type": "coa",
+        "properties":{
+          "title": "Sculpture 2",
+          "artist": "Mr. Smith",
+          "date": "08/03/1959",
+          "dimentions": {
+            "length": "300",
+            "height": "200",
+            "unit": "centimeter"
+          },
+          "medium": "Metalic Sculpture",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt voluptatem alias, vero provident voluptas obcaecati! Tenetur corrupti doloremque libero odio.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "Mr. Smith",
+          "type": "Artist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/artist"
+        }
+      },
+      "contract": "CostumACOA",
+      "token":{
+        "tokenId": 1,
+        "tokenURI": "ipfs://CostumACOA/metadataURI/1"
+      },
+      "id": 4
+    },
+    {
+      "metadata": {
+        "title": "Painting 3",
+        "type": "coa",
+        "properties": {
+          "artist": "Jhon Dow",
+          "title": "Painting 3",
+          "date": "01/31/1999",
+          "dimentions": {
+            "length": "60",
+            "height": "100",
+            "unit": "centimeter"
+          },
+          "medium": "Oil Painting",
+          "edition": {
+            "type": "unic"
+          },
+          "statement": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, at! Officia quod quia magnam enim.",
+          "image": "/home/andy-oe/Documents/chain-art-certificate/images/artworks/stock-img.png"
+        },
+        "issuer": {
+          "name": "G. Employe",
+          "type": "Gallerist",
+          "adress": "0xXXX...",
+          "signature": "ipfs://signature/employe"
+        }
+      },
+      "contract": "ERC721ACoA",
+      "token": {
+        "tokenId": "3",
+        "tokenURI": "ipfs://ERC721ACoA/metadataURI/3"
+      },
+      "id": 5
+    }
+  ]
+}
