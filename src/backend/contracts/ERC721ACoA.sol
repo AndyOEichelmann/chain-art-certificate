@@ -73,12 +73,12 @@ contract ERC721ACoA is ERC721, AccessControl {
     //                          CONSTRUCTOR
     // =============================================================
 
-    constructor(string memory tokenURI) ERC721("Art Certificate of Authenticity", "ACOA") {
+    constructor(string memory tokenURI_) ERC721("Art Certificate of Authenticity", "ACOA") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _grantRole(AUTHENTICATOR_ROLE, msg.sender);
 
-        _tokenURI = tokenURI;
+        _tokenURI = tokenURI_;
     }
 
     // =============================================================
@@ -190,7 +190,7 @@ contract ERC721ACoA is ERC721, AccessControl {
      * Requirements:
      * -`tokenId` must be minted
      */
-    function tokenInfo(uint256 tokenId) external view returns(uint64 value, string memory currency, address beneficiary, string memory tokenURI) {
+    function tokenInfo(uint256 tokenId) external view returns(uint64 value, string memory currency, address beneficiary, string memory tokenURI_) {
         _requireMinted(tokenId);
 
         ObjectValue memory object = _objectValue[tokenId];
@@ -198,7 +198,7 @@ contract ERC721ACoA is ERC721, AccessControl {
         currency = string(abi.encodePacked(object.currency));
         value = object.value;
         beneficiary = object.beneficiary;
-        tokenURI = string(abi.encodePacked(_tokenURI, tokenId.toString()));
+        tokenURI_ = string(abi.encodePacked(_tokenURI, "/" ,tokenId.toString(), ".json"));
     }
 
     /**
@@ -215,6 +215,16 @@ contract ERC721ACoA is ERC721, AccessControl {
         require(owner == msg.sender || hasRole(AUTHENTICATOR_ROLE, _msgSender()), "ERC721CoA: must be owner or registered authenticator");
 
         return _authenticationURI[tokenId];
+    }
+
+    /**
+     * @dev See {IERC721Metadata-tokenURI}.
+     */
+    function tokenURI(uint256 tokenId) public view override returns (string memory) {
+        _requireMinted(tokenId);
+
+        string memory baseURI = _baseURI();
+        return bytes(baseURI).length > 0 ? string(abi.encodePacked(_tokenURI, "/" ,tokenId.toString(), ".json")) : "";
     }
 
     // =============================================================

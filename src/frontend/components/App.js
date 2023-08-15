@@ -1,5 +1,8 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
+import { Alchemy, Network } from 'alchemy-sdk';
+
+
 // pages
 import Artists, { artistCoALoader } from './Pages/artists/Artists';
 import ArtistsError from './Pages/artists/ArtistsError';

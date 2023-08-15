@@ -21,9 +21,9 @@ contract ERC721ACoA_Intermediary is ERC721Holder, Context, ReentrancyGuard{
     Counters.Counter private _itemCounter;
     
     enum Status {
+        Unlisted,
         Listed,
-        Claimed,
-        Unlisted
+        Claimed
     }
 
     struct Item{
