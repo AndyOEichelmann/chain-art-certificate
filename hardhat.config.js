@@ -1,6 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
-// require("@nomiclabs/hardhat-etherscan");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -23,4 +22,11 @@ module.exports = {
   }
 };
 
+/**
+ * npx hardhat test
+ * REPORT_GAS=true npx hardhat test
+ * npx hardhat node
+ * npx hardhat run scripts/deploy.js
+ */
 
+// https://ipfs.io/ipfs/ {gateway}

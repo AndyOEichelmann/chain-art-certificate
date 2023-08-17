@@ -1,22 +1,21 @@
 const { artifacts } = require('hardhat');
 
-const tokenURI = 'ipfs://QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn';
-// QmRpPF4BLTNVDDX6WGbJzhnMmN63rWBbHnPMkZAzts6QgM
-// QmZKKKQh15pzZU5QTujHCwJZ7y2c7Cc9PSDWDQmKtXS6bb
+
+const tokenURI = 'ipfs://';
 
 async function main() {
-
+    
   // deply ACoA nft contract
-    const ACoA = await ethers.getContractFactory("ERC721ACoA");
-    const testACoA = await ACoA.deploy(tokenURI);
+  const CoA = await ethers.getContractFactory("ERC721CoA");
+  const coa = await CoA.deploy();
 
-  await testACoA.waitForDeployment();
+  await coa.waitForDeployment();
 
   console.log(
-    `Test ERC721ACoA deployed to ${testACoA.target}`
+    `Test ERC721ACoA deployed to ${coa.target}`
   );
 
-  saveFrontendFiles(testACoA, "ERC721ACoA");
+  saveFrontendFiles(coa, "ERC721CoA");
 }
 
 function saveFrontendFiles(contract, name) {
@@ -47,4 +46,8 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-// npx hardhat verify --network sepolia 0xA7a30302549dF44162Ee9f88eFB5dD86F1edD569 'ipfs://QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn'
+// npx hardhat run --network sepolia src/backend/scripts/deploy-token.js
+
+// npx hardhat verify --network sepolia 0x8A465A325B4A684B6D2abf13ecCE6150f4219426
+
+// etherscan: https://sepolia.etherscan.io/address/0x8A465A325B4A684B6D2abf13ecCE6150f4219426#code

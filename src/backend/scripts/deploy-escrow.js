@@ -1,20 +1,18 @@
 const { artifacts } = require('hardhat');
 
-const listingFee = 8200000000000001;
-
 async function main() {
 
-  // deply Art Codice Interediary
-  const ACInt = await ethers.getContractFactory("ERC721ACoA_Intermediary");
-  const intermediary = await ACInt.deploy(listingFee);
+  // deply CoA Escrow
+  const CoAEsrcow = await ethers.getContractFactory("ERC721CoA_Escrow");
+  const coaescrow = await CoAEsrcow.deploy();
 
-  await intermediary.waitForDeployment();
+  await coaescrow.waitForDeployment();
 
   console.log(
-    `Test ERC721ACoA deployed to ${intermediary.target}`
+    `Test ERC721ACoA deployed to ${coaescrow.target}`
   );
 
-  saveFrontendFiles(intermediary, "ERC721ACoA_Intermediary");
+  saveFrontendFiles(coaescrow, "ERC721ACoA_coaescrow");
 }
 
 function saveFrontendFiles(contract, name) {
@@ -45,4 +43,4 @@ main().catch((error) => {
   process.exitCode = 1;
 });
 
-// verify: npx hardhat verify --network sepolia 0x9Ec5d9B9d461F32a3b73Cd60beb0080D669B918f '8200000000000001'
+// verify: npx hardhat verify --network sepolia {address}
